@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { armLateStart, audioAllowed, playIntroScore, stopIntroScore } from "@/lib/cinematic-audio";
+import { audioAllowed, playIntroScore, stopIntroScore } from "@/lib/cinematic-audio";
 import { useIntro } from "@/lib/intro";
 import { CUE_AT, IntroUniverse, type Cue } from "./universe";
 
@@ -87,13 +87,11 @@ function Sequence({ setEntered, finish }: { setEntered: (v: boolean) => void; fi
     };
   }, [startScore]);
 
-  // The score is longer than the visuals: it keeps ringing under the hero and ends on its own.
-  // If the browser kept the intro silent, the first click on the hero plays the impact and chord.
-  useEffect(() => () => { if (!started.current) armLateStart(); }, []);
+  // The effects end on their own (~8 s), just after the intro hands over to the site.
 
   const skip = () => {
-    if (started.current) stopIntroScore(1.2);
-    else started.current = true; // skipping means "get me in": don't play the late start either
+    if (started.current) stopIntroScore(0.6);
+    else started.current = true; // skipping means "get me in": no sound starts after this
     engine.current?.jump(CUE_AT.emerge);
   };
 
