@@ -20,6 +20,7 @@ export const nav = [
   { label: "Services", href: "#services" },
   { label: "Observability", href: "#observability" },
   { label: "Automation", href: "#automation" },
+  { label: "MCP", href: "#mcp" },
   { label: "Websites", href: "#websites" },
   { label: "Work", href: "#work" },
   { label: "Experience", href: "#experience" },
@@ -30,6 +31,7 @@ export const heroRotating = [
   "AI agents that act.",
   "n8n automations.",
   "Playwright browser bots.",
+  "custom MCP servers.",
   "hybrid RAG systems.",
   "LLM observability.",
   "end-to-end evals.",
@@ -328,6 +330,10 @@ export const faqs = [
   {
     q: "Can you automate work inside websites that have no API?",
     a: "Yes. Playwright bots and browser agents log in, fill forms, download reports and scrape data headlessly, on a schedule, with retries, screenshots and traces. The same Playwright setup can also run automated end-to-end tests on every release.",
+  },
+  {
+    q: "What is MCP, and why would my business need it?",
+    a: "MCP (Model Context Protocol) is the open standard that lets AI assistants like Claude and Cursor, and your own agents, use real tools. I build a custom MCP server over your CRM, database, docs or internal APIs, so AI can look things up and act inside your business with scoped permissions, approval for anything that writes, and a log of every call.",
   },
   {
     q: "How does a freelance engagement start?",

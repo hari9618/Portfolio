@@ -9,6 +9,7 @@ import { Hero } from "@/components/Hero";
 import { CinematicIntro } from "@/components/intro/CinematicIntro";
 import { LiveRun } from "@/components/LiveRun";
 import { Marquee } from "@/components/Marquee";
+import { Mcp } from "@/components/Mcp";
 import { Nav } from "@/components/Nav";
 import { Observability } from "@/components/Observability";
 import { Principles } from "@/components/Principles";
@@ -34,6 +35,7 @@ export default function Home() {
         <Services />
         <Observability />
         <BrowserAutomation />
+        <Mcp />
         <Websites />
         <LiveRun />
         <Process />
